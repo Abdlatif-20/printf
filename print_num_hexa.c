@@ -1,5 +1,11 @@
 # include "printf.h"
 
+/**
+ * _print_num_hexa - prints a number in hexadecimal format;
+ * @num: number to print
+ * @base: base to print the number in
+ */
+
 void	_print_num_hexa(int num, int base)
 {
 	char *hexa = "0123456789abcdef";

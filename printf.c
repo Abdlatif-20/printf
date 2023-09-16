@@ -1,5 +1,10 @@
 # include "printf.h"
 
+/**
+ * _printf - prints a string to stdout
+ * @format: pointer to the string to print
+ */
+
 int		_printf(const char *format, ...)
 {
 	va_list args;
