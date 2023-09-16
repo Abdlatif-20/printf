@@ -5,8 +5,9 @@
  * @num: number to print
  */
 
-void	_print_address(unsigned long long num)
+int	_print_address(unsigned long long num)
 {
+	int count = 0;
 	static int flag;
 	char *hexa = "0123456789abcdef";
 	char *hex = "0123456789ABCDEF";
@@ -30,4 +31,6 @@ void	_print_address(unsigned long long num)
 	_putchar(hexa[num]);
 	}
 	}
+	count = get_len(num, 16);
+	return (count);
 }

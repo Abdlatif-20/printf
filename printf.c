@@ -20,40 +20,28 @@ int		_printf(const char *format, ...)
 		{
 			i++;
 			if (format[i] == 'x')
-			{
-				_print_unsigned_int(va_arg(args, int), 16, 1);
-				count++; } else if (format[i] == 'X')
-			{
-				_print_unsigned_int(va_arg(args, int), 16, 0);
-				count++; } else if (format[i] == 'd' || format[i] == 'i')
-			{
-				_print_num_hexa(va_arg(args, int));
-				count++; } else if (format[i] == 'u')
-			{
-				_print_unsigned_int(va_arg(args, unsigned int), 10, 2);
-				count++; } else if (format[i] == 'o')
-			{
-				_print_unsigned_int(va_arg(args, unsigned int), 8, 2);
-				count++; } else if (format[i] == 'X')
-			{
-				_print_unsigned_int(va_arg(args, unsigned int), 16, 0);
-				count++; } else if (format[i] == 'p')
-			{
-				_print_address(va_arg(args, unsigned long long));
-				count++; } else if (format[i] == 'c')
-			{
-				_putchar(va_arg(args, int));
-				count++; } else if (format[i] == 's')
-			{
-				_print_string(va_arg(args, char *));
-				count++; } else if (format[i] == '%')
-			{
-				_putchar('%');
-				count++; }
-		} else
-		{
-			_putchar(format[i]);
-			count++; }
+				count += _print_unsigned_int(va_arg(args, int), 16, 1);
+			else if (format[i] == 'X')
+				count += _print_unsigned_int(va_arg(args, int), 16, 0);
+			else if (format[i] == 'd' || format[i] == 'i')
+				count += _print_num(va_arg(args, int));
+			else if (format[i] == 'u')
+				count += _print_unsigned_int(va_arg(args, unsigned int), 10, 2);
+			else if (format[i] == 'o')
+				count += _print_unsigned_int(va_arg(args, unsigned int), 8, 2);
+			else if (format[i] == 'X')
+				count += _print_unsigned_int(va_arg(args, unsigned int), 16, 0);
+			else if (format[i] == 'p')
+				count += _print_address(va_arg(args, unsigned long long));
+			else if (format[i] == 'c')
+				count += _putchar(va_arg(args, int));
+			else if (format[i] == 's')
+				count += _print_string(va_arg(args, char *));
+			else if (format[i] == '%')
+				count += _putchar('%');
+		}
+		else
+			count += _putchar(format[i]);
 		i++;
 	}
 	va_end(args);

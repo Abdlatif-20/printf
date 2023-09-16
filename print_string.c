@@ -5,8 +5,10 @@
  * @str: pointer to the string to print
  */
 
-void	_print_string(char *str)
+int	_print_string(char *str)
 {
+	int count = 0;
 	while (*str)
-	write(1, str++, 1);
+		count += write(1, str++, 1);
+	return (count);
 }
