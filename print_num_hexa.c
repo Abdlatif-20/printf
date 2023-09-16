@@ -3,32 +3,25 @@
 /**
  * _print_num_hexa - prints a number in hexadecimal format;
  * @num: number to print
- * @base: base to print the number in
  */
 
-void	_print_num_hexa(int num, int base)
+void	_print_num_hexa(int num)
 {
-	char *hexa = "0123456789abcdef";
 	if (num == -2147483648)
 	{
-		_print_num_hexa(num / base, base);
-		_putchar('0' + (num % base) * -1);
+		_print_num_hexa(num / 10);
+		_putchar('0' + (num % 10) * -1);
 	}
-	else if (num < 0)
+	 if (num < 0)
 	{
 		_putchar('-');
-		_print_num_hexa(num * -1, base);
+		_print_num_hexa(num * -1);
 	}
-	else if (num >= base)
+	else if (num >= 10)
 	{
-		_print_num_hexa(num / base, base);
-		_print_num_hexa(num % base, base);
+		_print_num_hexa(num / 10);
+		_print_num_hexa(num % 10);
 	}
 	else
-	{
-		if (base == 16)
-			_putchar(hexa[num]);
-		else
-			_putchar('0' + (num % base));
-	}
+		_putchar('0' + (num % 10));
 }
