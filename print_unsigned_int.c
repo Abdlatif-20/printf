@@ -19,11 +19,11 @@ void _print_unsigned_int(unsigned int num, int base, int flag)
 	}
 	else
 	{
-	if (base == 16 && flag == 1)
+		if (base == 16 && flag == 1)
 			_putchar(hexa[num]);
 		else if (base == 16 && !flag)
 			_putchar(hex[num]);
-	else
-	_putchar('0' + num);
+		else
+			_putchar('0' + num);
 	}
 }
