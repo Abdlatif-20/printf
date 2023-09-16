@@ -1,12 +1,10 @@
 #include "printf.h"
 
 /**
- * _print_unsigned_int - prints an unsigned int to stdout
+ * get_len - gets the length of a number
  * @num: number to print
  * @base: base to print number in
- * @flag: flag to determine if hexa or hex
- * Return: number of characters printed
-* get_len - gets the length of a number
+ * Return: len
 */
 
 int	get_len(unsigned int num, int base)
@@ -21,6 +19,13 @@ int	get_len(unsigned int num, int base)
 	return (len);
 }
 
+/**
+ * _print_unsigned_int - prints an unsigned int to stdout
+ * @num: number to print
+ * @base: base to print number in
+ * @flag: flag to determine if hexa or hex
+ * Return: number of characters printed
+*/
 int	_print_unsigned_int(unsigned int num, int base, int flag)
 {
 	char *hexa = "0123456789abcdef";
