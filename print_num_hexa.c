@@ -12,7 +12,7 @@ void	_print_num_hexa(int num)
 		_print_num_hexa(num / 10);
 		_putchar('0' + (num % 10) * -1);
 	}
-	 if (num < 0)
+	if (num < 0)
 	{
 		_putchar('-');
 		_print_num_hexa(num * -1);

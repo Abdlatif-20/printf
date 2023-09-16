@@ -3,6 +3,8 @@
 /**
  * _printf - prints a string to stdout
  * @format: pointer to the string to print
+ *
+ * Return: count
  */
 
 int		_printf(const char *format, ...)
@@ -20,59 +22,38 @@ int		_printf(const char *format, ...)
 			if (format[i] == 'x')
 			{
 				_print_unsigned_int(va_arg(args, int), 16, 1);
-				count++;
-			}
-			else if (format[i] == 'X')
+				count++; } else if (format[i] == 'X')
 			{
 				_print_unsigned_int(va_arg(args, int), 16, 0);
-				count++;
-			}
-			else if (format[i] == 'd' || format[i] == 'i')
+				count++; } else if (format[i] == 'd' || format[i] == 'i')
 			{
 				_print_num_hexa(va_arg(args, int));
-				count++;
-			}
-			else if (format[i] == 'u')
+				count++; } else if (format[i] == 'u')
 			{
 				_print_unsigned_int(va_arg(args, unsigned int), 10, 2);
-				count++;
-			}
-			else if (format[i] == 'o')
+				count++; } else if (format[i] == 'o')
 			{
 				_print_unsigned_int(va_arg(args, unsigned int), 8, 2);
-				count++;
-			}
-			else if (format[i] == 'X')
+				count++; } else if (format[i] == 'X')
 			{
 				_print_unsigned_int(va_arg(args, unsigned int), 16, 0);
-				count++;
-			}
-			else if (format[i] == 'p')
+				count++; } else if (format[i] == 'p')
 			{
 				_print_address(va_arg(args, unsigned long long));
-				count++;
-			}
-			else if (format[i] == 'c')
+				count++; } else if (format[i] == 'c')
 			{
 				_putchar(va_arg(args, int));
-				count++;
-			}
-			else if (format[i] == 's')
+				count++; } else if (format[i] == 's')
 			{
 				_print_string(va_arg(args, char *));
-				count++;
-			}
-			else if (format[i] == '%')
+				count++; } else if (format[i] == '%')
 			{
 				_putchar('%');
-				count++;
-			}
-		}
-		else
+				count++; }
+		} else
 		{
 			_putchar(format[i]);
-			count++;
-		}
+			count++; }
 		i++;
 	}
 	va_end(args);
