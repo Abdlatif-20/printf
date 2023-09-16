@@ -3,11 +3,13 @@
 /**
  * _print_num - prints a number to stdout;
  * @num: number to print
- */
+ * Return: number of characters printed
+*/
 
 int	_print_num(int num)
 {
 	int count = 0;
+
 	if (num == -2147483648)
 	{
 		_print_num(num / 10);
