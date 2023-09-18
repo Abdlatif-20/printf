@@ -1,4 +1,4 @@
-#include "printf.h"
+#include "main.h"
 
 /**
  * get_len - gets the length of a number
