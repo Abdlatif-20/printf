@@ -32,7 +32,7 @@ int	_print_unsigned_int(unsigned int num, int base, int flag)
 	char *hex = "0123456789ABCDEF";
 	int count;
 
-	if (num >= base)
+	if (num >= (unsigned int)base)
 	{
 	_print_unsigned_int(num / base, base, flag);
 	_print_unsigned_int(num % base, base, flag);

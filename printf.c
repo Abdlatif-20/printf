@@ -32,7 +32,7 @@ int		_printf(const char *format, ...)
 			else if (format[i] == 'X')
 				count += _print_unsigned_int(va_arg(args, unsigned int), 16, 0);
 			else if (format[i] == 'p')
-				count += _print_address(va_arg(args, unsigned long long));
+				count += _print_address(va_arg(args, unsigned long));
 			else if (format[i] == 'c')
 				count += _putchar(va_arg(args, int));
 			else if (format[i] == 's')

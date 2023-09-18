@@ -6,12 +6,11 @@
  *  * Return: number of digits printed
  */
 
-int	_print_address(unsigned long long num)
+int	_print_address(unsigned long num)
 {
 	int count = 0;
 	static int flag;
-	char *hexa = "0123456789abcdef";
-	char *hex = "0123456789ABCDEF";
+	char hexa[] = "0123456789abcdef";
 
 	if (!flag)
 	{
