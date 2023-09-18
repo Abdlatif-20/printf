@@ -5,7 +5,7 @@
 # include <unistd.h>
 # include <stdio.h>
 # include <limits.h>
-
+# include "main.h"
 int _putchar(char c);
 int _print_num(int num);
 int _print_string(char *str);
