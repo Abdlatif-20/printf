@@ -21,8 +21,8 @@ int		_printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			if (format[i] == ' ')
-				count += _putchar(' ');
+			if (format[i] == '\0')
+				return (-1);
 			if (format[i] == 'x')
 				count += _print_unsigned_int(va_arg(args, int), 16, 1);
 			else if (format[i] == 'X')
@@ -47,6 +47,5 @@ int		_printf(const char *format, ...)
 		else
 			count += _putchar(format[i]);
 	}
-	va_end(args);
-	return (count);
+	return (va_end(args), count);
 }
