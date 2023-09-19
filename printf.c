@@ -21,6 +21,12 @@ int		_printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
+			if (format[i] == ' ')
+			{
+				while (format[i] == ' ')
+					i++;
+				count += _putchar(' ');
+			}
 			if (format[i] == 'x')
 				count += _print_unsigned_int(va_arg(args, int), 16, 1);
 			else if (format[i] == 'X')
@@ -31,8 +37,6 @@ int		_printf(const char *format, ...)
 				count += _print_unsigned_int(va_arg(args, unsigned int), 10, 2);
 			else if (format[i] == 'o')
 				count += _print_unsigned_int(va_arg(args, unsigned int), 8, 2);
-			else if (format[i] == 'X')
-				count += _print_unsigned_int(va_arg(args, unsigned int), 16, 0);
 			else if (format[i] == 'p')
 				count += _print_address(va_arg(args, unsigned long));
 			else if (format[i] == 'c')
