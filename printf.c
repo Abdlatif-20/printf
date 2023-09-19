@@ -22,11 +22,7 @@ int		_printf(const char *format, ...)
 		{
 			i++;
 			if (format[i] == ' ')
-			{
-				while (format[i] == ' ')
-					i++;
 				count += _putchar(' ');
-			}
 			if (format[i] == 'x')
 				count += _print_unsigned_int(va_arg(args, int), 16, 1);
 			else if (format[i] == 'X')
