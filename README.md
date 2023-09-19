@@ -1,4 +1,4 @@
-The printf function sends formatted output to stdout.
+this is a readme file for printf task The printf function sends formatted output to stdout.
 _printf() function format string is a character string, beginning and ending in its initial shift state, if any. These arguments are placed using the percentage '%' operator
 i use the following conversion specifiers:
 %c: print a single character.
