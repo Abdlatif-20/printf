@@ -7,10 +7,15 @@
  * Return: len
 */
 
-int	get_len(unsigned int num, int base)
+int	get_len(int num, int base)
 {
 	int len = 0;
 
+	if (num < 0)
+	{
+		num = -num;
+		len++;
+	}
 	if (num == 0)
 		return (1);
 	while (num != 0)
