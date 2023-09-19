@@ -11,6 +11,8 @@ int	get_len(unsigned int num, int base)
 {
 	int len = 0;
 
+	if (num == 0)
+		return (1);
 	while (num != 0)
 	{
 		num /= base;
