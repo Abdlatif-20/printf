@@ -12,8 +12,8 @@ int	_print_num(int num)
 
 	if (num == -2147483648)
 	{
-		_print_num(num / 10);
-		_putchar('0' + (num % 10) * -1);
+		_print_string("-2147483648");
+		return (11);
 	}
 	if (num < 0)
 	{
