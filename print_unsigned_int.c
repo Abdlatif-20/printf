@@ -7,7 +7,8 @@
  * Return: len
 */
 
-int	get_len(int num, int base)
+
+int get_len(int num, int base)
 {
 	int len = 0;
 
