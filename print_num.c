@@ -1,8 +1,8 @@
 # include "main.h"
 
 /**
- * _print_num - prints a number to stdout;
- * @num: number to print
+ * _print_num - prints a number to stdout écrire un nombre
+ * @num: number to print numéru pour écrire
  * Return: number of characters printed
 */
 
@@ -23,6 +23,7 @@ int	_print_num(int num)
 	else if (num >= 10)
 	{
 		_print_num(num / 10);
+
 		_print_num(num % 10);
 	}
 	else

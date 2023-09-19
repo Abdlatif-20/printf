@@ -2,7 +2,7 @@
 
 /**
  * _printf - prints a string to stdout ecrire une chaine de caractaires
- * @format: pointer to the string to print pointeur vers une chaine de caractaire
+ * @format: pointer to the string to print pointeur vers une chaine de
  *
  * Return: count
  */
